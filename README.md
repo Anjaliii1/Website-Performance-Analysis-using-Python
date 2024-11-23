@@ -16,7 +16,7 @@ A Python-based project that analyzes and monitors the performance of websites.Ev
   5. Visualizing User and Session Trends Over Time:
      
 ![image](https://github.com/user-attachments/assets/c13196d5-e30f-412a-afea-dc2d9da17d81)
-he graph reveals noticeable fluctuations in both the number of users and sessions, suggesting the presence of daily cycles or periods of heightened traffic. The trends for both metrics are similar, which aligns with the expectation that an increase in users typically leads to more sessions. Certain peaks may be associated with marketing campaigns, promotions, or special events.
+The graph reveals noticeable fluctuations in both the number of users and sessions, suggesting the presence of daily cycles or periods of heightened traffic. The trends for both metrics are similar, which aligns with the expectation that an increase in users typically leads to more sessions. Certain peaks may be associated with marketing campaigns, promotions, or special events.
   6. User Engagement Analysis:
  After analyzing session trends, we will now focus on User Engagement. This phase will involve evaluating key metrics, including:
     - Average Engagement Time per Session:
@@ -49,6 +49,29 @@ he graph reveals noticeable fluctuations in both the number of users and session
      
    ![image](https://github.com/user-attachments/assets/da947073-c450-4367-9bcb-160b0c7d4fa7)
 
-7.    
-       
+7. Channel Performance Analysis: Analyzing session, user, and engagement data segmented by marketing channels to evaluate their contribution to traffic and engagement.
+   
+   ![image](https://github.com/user-attachments/assets/6be3d386-0d12-4801-9e1a-58bcab6a3ef6)
+   
+   The data reveals varied channel performance, with 'Organic Search' driving high traffic but lower engagement, while 'Referral' and 'Organic Video' excel in user engagement despite lower volumes. These insights highlight opportunities to refine marketing strategies by leveraging each channel's strengths.
+
+8. ### Forecasting Website Traffic:
+  - To forecast website traffic for the next 24 hours, we'll build a time series model using observed session data. First, we'll plot autocorrelation (ACF) and partial autocorrelation (PACF) to identify patterns and determine the appropriate parameters for an ARIMA model.
+  - ![image](https://github.com/user-attachments/assets/c39263a0-b1cc-475e-bd42-851c8a13f541)
+  - PACF: Helps determine the AR (p) order by identifying the lag where partial autocorrelations drop off. A significant spike at lag 1 suggests 
+𝑝
+=
+1
+p=1.
+
+- ACF: Helps identify the MA (q) order by observing the lag where autocorrelations taper off. A gradual tailing off with a significant spike at lag 1 suggests 
+𝑞
+=
+1
+q=1 as a starting point.
+- For forecasting website traffic with seasonality, set the SARIMA model's d parameter to 1. Here's how to predict traffic for the next 24 hours using SARIMA.
+- ![image](https://github.com/user-attachments/assets/06a09b14-5204-4052-8d90-636db9fe5557)
+### A comprehensive analysis of website performance, focusing on session trends, user engagement, channel effectiveness, and traffic forecasting to optimize insights and strategies.
+
+  
        
